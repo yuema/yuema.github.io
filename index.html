@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/intersection-observer@0.7.0/intersection-observer.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.3.1/dist/lazyload.min.js"></script>
-    <title></title>
+    <title>MeMe Lord</title>
     <style>
       * {
         box-sizing: border-box;
@@ -19,14 +19,24 @@
       body {
         width: 100%;
         margin: 0;
+        background-color: #e6e6e6;
+      }
+
+      .title {
+        font-size: 24px;
+        font-weight: bold;
+        padding: 20px;
       }
 
       #root {
         width: 100%;
+        padding: 0 12px;
       }
 
       .wrapper {
-        padding: 10px;
+        padding: 8px;
+        background-color: #ffffff;
+        margin-bottom: 12px;
       }
 
       .lazy {
@@ -36,6 +46,7 @@
     </style>
   </head>
   <body>
+    <div class="title">MeMe Lord</div>
     <div id="root">
       <div class="wrapper">
         <img alt="0.jpg" class="lazy" data-src="./images/0.jpg" />
