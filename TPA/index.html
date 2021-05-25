@@ -71,6 +71,75 @@
 				display: block;
 				width: 100%;
 			}
+			.advertising {
+				position: relative;
+				width: 100%;
+				height: 280px;
+				display: flex;
+				margin-bottom: 10px;
+				justify-content: space-around;
+			}
+			.ad_one {
+				max-width: 291px;
+				width: 100%;
+				height: 100%;
+				border-radius: 10px;
+				margin-right: 6px;
+				background-color: #efefef;
+			}
+			.ad_two {
+				max-width: 291px;
+				margin-left: 6px;
+				border-radius: 10px;
+				width: 100%;
+				height: 100%;
+				background-color: #efefef;
+			}
+
+			.ad1,
+			.ad2 {
+				width: 100%;
+				height: 100%;
+				border-radius: 10px;
+			}
+			/* 大屏幕 ：大于等于1200px*/
+			@media (min-width: 1200px) {
+				.advertising {
+					height: 480px;
+				}
+			}
+
+			/*默认*/
+			@media (min-width: 980px) {
+				.advertising {
+					height: 381px;
+				}
+			}
+
+			/* 平板电脑和小屏电脑之间的分辨率 */
+			@media (min-width: 768px) and (max-width: 979px) {
+				.advertising {
+					height: 294px;
+				}
+				.ad_two,
+				.ad_one {
+					width: 178px;
+				}
+			}
+
+			/* 横向放置的手机和竖向放置的平板之间的分辨率 */
+			@media (max-width: 767px) {
+				.advertising {
+					height: 294px;
+				}
+			}
+
+			/* 横向放置的手机及分辨率更小的设备 */
+			@media (max-width: 480px) {
+				.advertising {
+					height: 280px;
+				}
+			}
 		</style>
 	</head>
 	<body>
@@ -79,6 +148,14 @@
 		<!-- End Google Tag Manager (noscript) -->
 
 		<div id="root">
+			<div class="advertising">
+				<a href="https://uptapapi.uptap.com/h5Game/?type=Game&platform=uptapin2&appid=BigSword" class="ad_one">
+					<img class="ad1" src="./images/BigSword20120519.gif" alt="" />
+				</a>
+				<a href="https://uptapapi.uptap.com/h5Game/?type=Game&platform=uptapin2&appid=BoardTheTrain" class="ad_two">
+					<img class="ad2" src="./images/BoardTheTrain20210519.gif" alt="" />
+				</a>
+			</div>
 			<fw-embed-feed app_id="XtmB44NVgdoudKg9kMkoy3hvoWd1NLms" mode="grid" open_in="default" max_videos="0" placement="middle" title=""></fw-embed-feed>
 		</div>
 		<script type="text/javascript" src="https://s.skimresources.com/js/187404X1658028.skimlinks.js"></script>
