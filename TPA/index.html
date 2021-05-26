@@ -74,7 +74,7 @@
 			.advertising {
 				position: relative;
 				width: 100%;
-				height: 280px;
+				height: 200px;
 				display: flex;
 				margin-bottom: 10px;
 				justify-content: space-around;
@@ -84,12 +84,20 @@
 				width: 100%;
 				height: 100%;
 				border-radius: 10px;
-				margin-right: 6px;
+				/* margin-right: 6px; */
 				background-color: #efefef;
 			}
 			.ad_two {
 				max-width: 291px;
 				margin-left: 6px;
+				margin-right: 6px;
+				border-radius: 10px;
+				width: 100%;
+				height: 100%;
+				background-color: #efefef;
+			}
+			.ad_third {
+				max-width: 291px;
 				border-radius: 10px;
 				width: 100%;
 				height: 100%;
@@ -119,7 +127,7 @@
 			/* 平板电脑和小屏电脑之间的分辨率 */
 			@media (min-width: 768px) and (max-width: 979px) {
 				.advertising {
-					height: 294px;
+					height: 214px;
 				}
 				.ad_two,
 				.ad_one {
@@ -130,14 +138,14 @@
 			/* 横向放置的手机和竖向放置的平板之间的分辨率 */
 			@media (max-width: 767px) {
 				.advertising {
-					height: 294px;
+					height: 214px;
 				}
 			}
 
 			/* 横向放置的手机及分辨率更小的设备 */
 			@media (max-width: 480px) {
 				.advertising {
-					height: 280px;
+					height: 170px;
 				}
 			}
 		</style>
@@ -154,6 +162,9 @@
 				</a>
 				<a href="https://uptapapi.uptap.com/h5Game/?type=Game&platform=uptapin2&appid=BoardTheTrain" class="ad_two">
 					<img class="ad2" src="./images/BoardTheTrain20210519.gif" alt="" />
+				</a>
+				<a href="https://uptapapi.uptap.com/h5Game/?type=Game&platform=uptapin2&appid=BoardTheTrain" class="ad_third">
+					<img class="ad2" src="./images/ColorBall3D.gif" alt="" />
 				</a>
 			</div>
 			<fw-embed-feed app_id="XtmB44NVgdoudKg9kMkoy3hvoWd1NLms" mode="grid" open_in="default" max_videos="0" placement="middle" title=""></fw-embed-feed>
