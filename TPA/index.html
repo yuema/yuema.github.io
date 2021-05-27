@@ -166,9 +166,8 @@
 	<script>
 		var map = {}
 		for (var i = 0; i < 3; i++) {
-			var r = Math.floor(Math.random() * 9)
+			var r = Math.floor(Math.random() * 10)
 			if (null == map[r]) {
-				// console.log(r)
 				document.getElementById(r).style.display = ''
 				map[r] = 1
 			} else {
