@@ -1,348 +1,157 @@
 <!DOCTYPE html>
-<div id="TPA" style="display: none">
-	<html lang="en">
-		<head>
-			<meta charset="UTF-8" />
-			<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-			<script src="https://cdn.jsdelivr.net/npm/intersection-observer@0.7.0/intersection-observer.js"></script>
-			<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.3.1/dist/lazyload.min.js"></script>
-	
-			<!-- Google Tag Manager -->
-			<script>
-				;(function (w, d, s, l, i) {
-					w[l] = w[l] || []
-					w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' })
-					var f = d.getElementsByTagName(s)[0],
-						j = d.createElement(s),
-						dl = l != 'dataLayer' ? '&l=' + l : ''
-					j.async = true
-					j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl
-					f.parentNode.insertBefore(j, f)
-				})(window, document, 'script', 'dataLayer', 'GTM-58F7GTF')
-			</script>
-			<!-- End Google Tag Manager -->
-	
-			<!-- Global site tag (gtag.js) - Google Analytics -->
-			<script async src="https://www.googletagmanager.com/gtag/js?id=G-T7JNEG8D5R"></script>
-			<script>
-				window.dataLayer = window.dataLayer || []
-				function gtag() {
-					dataLayer.push(arguments)
-				}
-				gtag('js', new Date())
-	
-				gtag('config', 'G-T7JNEG8D5R')
-			</script>
-			<script async type="text/javascript" src="https://asset.fwcdn2.com/js/embed-feed.js"></script>
-	
-			<style>
-				* {
-					box-sizing: border-box;
-				}
-	
-				html {
-					width: 100%;
-				}
-	
-				body {
-					width: 100%;
-					margin: 0;
-					background-color: #e6e6e6;
-				}
-	
-				.title {
-					font-size: 24px;
-					font-weight: bold;
-					padding: 20px;
-				}
-	
-				#root {
-					width: 100%;
-					padding: 0 12px;
-				}
-	
-				.wrapper {
-					padding: 8px;
-					background-color: #ffffff;
-					margin-bottom: 12px;
-				}
-	
-				.lazy {
-					display: block;
-					width: 100%;
-				}
-				.advertising {
-					position: relative;
-					margin-top: 12px;
-					width: 100%;
-					height: width * 1.5;
-					display: flex;
-					margin-bottom: 10px;
-					justify-content: space-between;
-				}
-				.ad_box {
-					max-width: 291px;
-					width: 32%;
-					height: width * 1.5;
-					border-radius: 10px;
-					background-color: #efefef;
-				}
-	
-				.ad {
-					width: 100%;
-					height: 100%;
-					border-radius: 10px;
-				}
-				/* @media (min-width: 1200px) {
-					.advertising {
-						height: 150%;
-					}
-				}
-	
-				@media (min-width: 980px) {
-					.advertising {
-						height: 150%;
-					}
-				}
-				@media (min-width: 768px) and (max-width: 979px) {
-					.advertising {
-						height: 150%;
-					}
-				}
-				@media (max-width: 767px) {
-					.advertising {
-						height: 150%;
-					}
-				}
-				@media (max-width: 480px) {
-					.advertising {
-						height: 150%;
-					}
-				} */
-			</style>
-		</head>
-		<body>
-			<!-- Google Tag Manager (noscript) -->
-			<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-58F7GTF" height="0" width="0" style="display: none; visibility: hidden"></iframe></noscript>
-			<!-- End Google Tag Manager (noscript) -->
-	
-			<div id="root">
-				<!-- <div class="advertising">
-					<a href="https://uptapapi.uptap.com/h5Game/?type=Game&platform=uptapin2&appid=BigSword" class="ad_box" style="display: none" id="0">
-						<img class="ad" src="./images/BigSword20120519.gif" alt="" />
-					</a>
-					<a href="https://uptapapi.uptap.com/h5Game/?type=Game&platform=uptapin2&appid=BoardTheTrain" class="ad_box" style="display: none" id="1">
-						<img class="ad" src="./images/BoardTheTrain20210519.gif" alt="" />
-					</a>
-					<a href="https://uptapapi.uptap.com/h5Game/?type=Game&platform=uptapin2&appid=ColorBall3D" class="ad_box" style="display: none" id="2">
-						<img class="ad" src="./images/ColorBall3D.gif" alt="" />
-					</a>
-					<a href="https://uptapapi.uptap.com/h5Game/?type=Game&platform=uptapin2&appid=CrazyKart3D" class="ad_box" style="display: none" id="3">
-						<img class="ad" src="./images/CrazyKart3D.gif" alt="" />
-					</a>
-					<a href="https://uptapapi.uptap.com/h5Game/?type=Game&platform=uptapin2&appid=CrazyMoto" class="ad_box" style="display: none" id="4">
-						<img class="ad" src="./images/CrazyMoto.gif" alt="" />
-					</a>
-					<a href="https://uptapapi.uptap.com/h5Game/?type=Game&platform=uptapin2&appid=FeverRacing" class="ad_box" style="display: none" id="5">
-						<img class="ad" src="./images/FeverRacing-ICON-动画.gif" alt="" />
-					</a>
-					<a href="https://uptapapi.uptap.com/h5Game/?type=Game&platform=uptapin2&appid=FireTheGun" class="ad_box" style="display: none" id="6">
-						<img class="ad" src="./images/FireTheGun-Icon-GIF.gif" alt="" />
-					</a>
-					<a href="https://uptapapi.uptap.com/h5Game/?type=Game&platform=uptapin2&appid=LetMeIn" class="ad_box" style="display: none" id="7">
-						<img class="ad" src="./images/LetMeIn20210519.gif" alt="" />
-					</a>
-					<a href="https://uptapapi.uptap.com/h5Game/?type=Game&platform=uptapin2&appid=MergeGuns3D" class="ad_box" style="display: none" id="8">
-						<img class="ad" src="./images/MergeGuns3D-ICON-GIF-A.gif" alt="" />
-					</a>
-					<a href="https://uptapapi.uptap.com/h5Game/?type=Game&platform=uptapin2&appid=ZombieSurvival" class="ad_box" style="display: none" id="9">
-						<img class="ad" src="./images/ZombieSurvival.gif" alt="" />
-					</a>
-				</div> -->
-				<fw-embed-feed app_id="XtmB44NVgdoudKg9kMkoy3hvoWd1NLms" mode="grid" open_in="_blank" max_videos="0" placement="middle" title=""></fw-embed-feed>
-			</div>
-			<script type="text/javascript" src="https://s.skimresources.com/js/187404X1658028.skimlinks.js"></script>
-		</body>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="https://cdn.jsdelivr.net/npm/intersection-observer@0.7.0/intersection-observer.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.3.1/dist/lazyload.min.js"></script>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-MT723MRCVM"></script>
 		<script>
-			var map = {}
-			for (var i = 0; i < 3; i++) {
-				var r = Math.floor(Math.random() * 10)
-				if (null == map[r]) {
-					document.getElementById(r).style.display = ''
-					map[r] = 1
-				} else {
-					i--
-					continue
-				}
+			window.dataLayer = window.dataLayer || []
+			function gtag() {
+				dataLayer.push(arguments)
 			}
+			gtag('js', new Date())
+
+			gtag('config', 'G-MT723MRCVM')
 		</script>
-	</html></div>
-<div id="TPC" style="display: none">
-	<html lang="en">
-		<head>
-			<meta charset="UTF-8" />
-			<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-			<script src="https://cdn.jsdelivr.net/npm/intersection-observer@0.7.0/intersection-observer.js"></script>
-			<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.3.1/dist/lazyload.min.js"></script>
-			<!-- Global site tag (gtag.js) - Google Analytics -->
-			<script async src="https://www.googletagmanager.com/gtag/js?id=G-MT723MRCVM"></script>
-			<script>
-				window.dataLayer = window.dataLayer || []
-				function gtag() {
-					dataLayer.push(arguments)
-				}
-				gtag('js', new Date())
-	
-				gtag('config', 'G-MT723MRCVM')
-			</script>
-			<script async type="text/javascript" src="https://asset.fwcdn2.com/js/embed-feed.js"></script>
-	
-			<style>
-				* {
-					box-sizing: border-box;
-				}
-	
-				html {
-					width: 100%;
-				}
-	
-				body {
-					width: 100%;
-					margin: 0;
-					background-color: #e6e6e6;
-				}
-	
-				.title {
-					font-size: 24px;
-					font-weight: bold;
-					padding: 20px;
-				}
-	
-				#root {
-					width: 100%;
-					padding: 0 12px;
-				}
-	
-				.wrapper {
-					padding: 8px;
-					background-color: #ffffff;
-					margin-bottom: 12px;
-				}
-	
-				.lazy {
-					display: block;
-					width: 100%;
-				}
-			</style>
-		</head>
-		<body>
-			<div id="root">
-				<div class="youtube" style="display: flex; justify-content: space-around; margin-bottom: 10px">
-					<div class="one" style="margin-right: 6px">
-						<iframe
-							width="100%"
-							height="315"
-							style="border-radius: 10px"
-							src="https://www.youtube.com/embed/MdEFOv1UFtU" 
-							title="YouTube video player"
-							frameborder="0"
-							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-							allowfullscreen
-						></iframe>
-					</div>
-					<a href="https://play.google.com/store/apps/details?id=dope.dopewallpapers.backgrounds&referrer=utm_source%3DTPC" class="two" style="margin-left: 6px">
-						<iframe
-							width="100%"
-							height="315"
-							style="border-radius: 10px"
-							src="https://www.youtube.com/embed/Frhab9YrSEo" 
-							title="YouTube video player"
-							frameborder="0"
-							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-							allowfullscreen
-						></iframe>
-					</a>
+		<script async type="text/javascript" src="https://asset.fwcdn2.com/js/embed-feed.js"></script>
+
+		<style>
+			* {
+				box-sizing: border-box;
+			}
+
+			html {
+				width: 100%;
+			}
+
+			body {
+				width: 100%;
+				margin: 0;
+				background-color: #e6e6e6;
+			}
+
+			.title {
+				font-size: 24px;
+				font-weight: bold;
+				padding: 20px;
+			}
+
+			#root {
+				width: 100%;
+				padding: 0 12px;
+			}
+
+			.wrapper {
+				padding: 8px;
+				background-color: #ffffff;
+				margin-bottom: 12px;
+			}
+
+			.lazy {
+				display: block;
+				width: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="root">
+			<div class="youtube" style="display: flex; justify-content: space-around; margin-bottom: 10px">
+				<div class="one" style="margin-right: 6px">
+					<iframe
+						width="100%"
+						height="315"
+						style="border-radius: 10px"
+						src="https://www.youtube.com/embed/MdEFOv1UFtU" 
+						title="YouTube video player"
+						frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen
+					></iframe>
 				</div>
-				<div class="youtube" style="display: flex; justify-content: space-around; margin-bottom: 10px">
-					<div class="one" style="margin-right: 6px">
-						<iframe
-							width="100%"
-							height="315"
-							style="border-radius: 10px"
-							src="https://www.youtube.com/embed/vtoQ8wJ_XFE?controls=0"
-							title="YouTube video player"
-							frameborder="0"
-							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-							allowfullscreen
-						></iframe>
-					</div>
-					<div class="two" style="margin-left: 6px">
-						<iframe
-							width="100%"
-							height="315"
-							style="border-radius: 10px"
-							src="https://www.youtube.com/embed/-dPIDr6NqCc?controls=0"
-							title="YouTube video player"
-							frameborder="0"
-							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-							allowfullscreen
-						></iframe>
-					</div>
-				</div>
-				<div id="rn_ad_native_xe43h"></div>
-				<fw-embed-feed app_id="uhY_qzqW02Gtjsg9auDYl91JKohMIUjs" mode="grid" open_in="_blank" max_videos="0" placement="middle" title=""></fw-embed-feed>
+				<a href="https://play.google.com/store/apps/details?id=dope.dopewallpapers.backgrounds&referrer=utm_source%3DTPC" class="two" style="margin-left: 6px">
+					<iframe
+						width="100%"
+						height="315"
+						style="border-radius: 10px"
+						src="https://www.youtube.com/embed/Frhab9YrSEo" 
+						title="YouTube video player"
+						frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen
+					></iframe>
+				</a>
 			</div>
-			<script src="//cdn.runative-syndicate.com/sdk/v1/n.js"></script>
-			<script>
-				NativeAd({
-					element_id: 'rn_ad_native_xe43h',
-					spot: '2061ec722923463689d54eb630b59439',
-					type: 'label-under',
-					cols: 2,
-					rows: 1,
-					title: '',
-					titlePosition: 'left',
-					adsByPosition: 'bottom-right',
-					breakpoints: [
-						{
-							cols: 2,
-							width: 770,
-						},
-					],
-					showLogoInfo: true,
-					styles: {
-						image: {
-							'padding-bottom': '229px',
-						},
-						container: {
-							width: '100%',
-							height: '250px',
-							overflow: 'hidden',
-						},
+			<div class="youtube" style="display: flex; justify-content: space-around; margin-bottom: 10px">
+				<div class="one" style="margin-right: 6px">
+					<iframe
+						width="100%"
+						height="315"
+						style="border-radius: 10px"
+						src="https://www.youtube.com/embed/vtoQ8wJ_XFE?controls=0"
+						title="YouTube video player"
+						frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen
+					></iframe>
+				</div>
+				<div class="two" style="margin-left: 6px">
+					<iframe
+						width="100%"
+						height="315"
+						style="border-radius: 10px"
+						src="https://www.youtube.com/embed/-dPIDr6NqCc?controls=0"
+						title="YouTube video player"
+						frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen
+					></iframe>
+				</div>
+			</div>
+			<div id="rn_ad_native_xe43h"></div>
+			<fw-embed-feed app_id="uhY_qzqW02Gtjsg9auDYl91JKohMIUjs" mode="grid" open_in="_blank" max_videos="0" placement="middle" title=""></fw-embed-feed>
+		</div>
+		<script src="//cdn.runative-syndicate.com/sdk/v1/n.js"></script>
+		<script>
+			NativeAd({
+				element_id: 'rn_ad_native_xe43h',
+				spot: '2061ec722923463689d54eb630b59439',
+				type: 'label-under',
+				cols: 2,
+				rows: 1,
+				title: '',
+				titlePosition: 'left',
+				adsByPosition: 'bottom-right',
+				breakpoints: [
+					{
+						cols: 2,
+						width: 770,
 					},
-				})
-			</script>
-			<script src="//cdn.runative-syndicate.com/sdk/v1/inpage.push.js"></script>
-			<script>
-				RnInPagePush({
-					spot: '4b819702e51e4206bc812428d75849b1',
-					cookieExpires: 1,
-					verticalPosition: 'top',
-				})
-			</script>
-			<script type="text/javascript" src="https://s.skimresources.com/js/187404X1658028.skimlinks.js"></script>
-		</body>
-	</html>
-</div>
-<script>
-	var num = Math.round(Math.random() * 10)
-	if (num % 2 == 0) {
-		// 偶数
-		document.getElementById('TPA').style.display = ''
-	} else {
-		// 奇数
-		document.getElementById('TPC').style.display = ''
-	}
-</script>
+				],
+				showLogoInfo: true,
+				styles: {
+					image: {
+						'padding-bottom': '229px',
+					},
+					container: {
+						width: '100%',
+						height: '250px',
+						overflow: 'hidden',
+					},
+				},
+			})
+		</script>
+		<script src="//cdn.runative-syndicate.com/sdk/v1/inpage.push.js"></script>
+		<script>
+			RnInPagePush({
+				spot: '4b819702e51e4206bc812428d75849b1',
+				cookieExpires: 1,
+				verticalPosition: 'top',
+			})
+		</script>
+		<script type="text/javascript" src="https://s.skimresources.com/js/187404X1658028.skimlinks.js"></script>
+	</body>
+</html>
