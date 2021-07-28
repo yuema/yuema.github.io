@@ -1,279 +1,583 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
-	</head>
-	<style>
-		.advertising {
-			position: relative;
-			margin-top: 12px;
-			width: 100%;
-			height: width * 1.5;
-			display: flex;
-			margin-bottom: 8px;
-			justify-content: space-between;
-		}
-		.ad_box {
-			max-width: 291px;
-			width: 49%;
-			height: width * 1.5;
-			border-radius: 10px;
-			background-color: #efefef;
-		}
-
-		.ad {
-			width: 100%;
-			height: 100%;
-			border-radius: 10px;
-		}
-	</style>
-	<body>
-		<div class="advertising">
-			<a href="https://uptapapi.uptap.com/h5Game/?type=Game&platform=uptapin2&appid=BigSword" class="ad_box" id="0">
-				<img class="ad" src="./images/BigSword20120519.gif" alt="" />
-			</a>
-			<a href="https://uptapapi.uptap.com/h5Game/?type=Game&platform=uptapin2&appid=BoardTheTrain" class="ad_box" id="1">
-				<img class="ad" src="./images/BoardTheTrain20210519.gif" alt="" />
-			</a>
-		</div>
-		<div class="advertising">
-			<a href="https://uptapapi.uptap.com/h5Game/?type=Game&platform=uptapin2&appid=ColorBall3D" class="ad_box" id="2">
-				<img class="ad" src="./images/ColorBall3D.gif" alt=""/>
-			</a>
-			<a href="https://uptapapi.uptap.com/h5Game/?type=Game&platform=uptapin2&appid=CrazyKart3D" class="ad_box" id="3">
-				<img class="ad" src="./images/CrazyKart3D.gif" alt=""/>
-			</a>
-		</div>
-		<div class="advertising">
-			<a href="https://uptapapi.uptap.com/h5Game/?type=Game&platform=uptapin2&appid=CrazyMoto" class="ad_box" id="4">
-				<img class="ad" src="./images/CrazyMoto.gif" alt="" />
-			</a>
-			<a href="https://uptapapi.uptap.com/h5Game/?type=Game&platform=uptapin2&appid=FeverRacing" class="ad_box" id="5">
-				<img class="ad" src="./images/FeverRacing-ICON-动画.gif" alt="" />
-			</a>
-		</div>
-		<div class="advertising">
-			<a href="https://uptapapi.uptap.com/h5Game/?type=Game&platform=uptapin2&appid=FireTheGun" class="ad_box" id="6">
-				<img class="ad" src="./images/FireTheGun-Icon-GIF.gif" alt="" />
-			</a>
-			<a href="https://uptapapi.uptap.com/h5Game/?type=Game&platform=uptapin2&appid=LetMeIn" class="ad_box" id="7">
-				<img class="ad" src="./images/LetMeIn20210519.gif" alt="" />
-			</a>
-		</div>
-		<div class="advertising">
-			<a href="https://uptapapi.uptap.com/h5Game/?type=Game&platform=uptapin2&appid=MergeGuns3D" class="ad_box" id="8">
-				<img class="ad" src="./images/MergeGuns3D-ICON-GIF-A.gif" alt="" />
-			</a>
-			<a href="https://uptapapi.uptap.com/h5Game/?type=Game&platform=uptapin2&appid=ZombieSurvival" class="ad_box" id="9">
-				<img class="ad" src="./images/ZombieSurvival.gif" alt="" />
-			</a>
-		</div>
-	</body>
-</html> -->
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="dailymotion-domain-verification" content="dmxvbuwikt16i12qy" />
-		<script src="https://cdn.jsdelivr.net/npm/intersection-observer@0.7.0/intersection-observer.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.3.1/dist/lazyload.min.js"></script>
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-MT723MRCVM"></script>
-		<script>
-			window.dataLayer = window.dataLayer || []
-			function gtag() {
-				dataLayer.push(arguments)
-			}
-			gtag('js', new Date())
 
-			gtag('config', 'G-MT723MRCVM')
-		</script> -->
-		<script async type="text/javascript" src="https://asset.fwcdn2.com/js/embed-feed.js"></script>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PlayGameFun</title>
+  <link rel="icon" href="images/brand/game-rock-icon.svg" sizes="32x32">
+  <link rel="icon" href="images/brand/game-rock-icon.svg" sizes="192x192">
+  <link href="css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
 
-		<!-- <style>
-			* {
-				box-sizing: border-box;
-			}
+  
+  <style>
+  .ads {
+      position: relative;
+      margin: 1em 0;
+      height: 250px;
+      background-color: #ddd;
+    }
+    .ads:before {
+      content: 'Advertisement';
+      display: flex;
+      justify-content: center;
+      text-transform: uppercase;
+      font-size: .6em;
+      opacity: .5;
+    }
+  </style>
+</head>
 
-			html {
-				width: 100%;
-			}
+<body>
+  <!-- header start -->
+  <header class="site-header sticky-top">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg">
+        <div class="site-branding">
+          <div class="site-logo">
+            <a class="navbar-brand" href="index.html"><img class="logo" src="images/brand/game-rock-logo.svg"
+                alt="PlayGameFun"></a>
+          </div>
+          <h1 class="site-title screen-reader-text">PlayGameFun</h1>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" class="bi" fill="currentColor"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z">
+            </path>
+          </svg>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="nav">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                All Games
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="action.html">Action</a></li>
+                <li><a class="dropdown-item" href="casual.html">Casual</a></li>
+                <li><a class="dropdown-item" href="defense.html">Defense</a></li>
+                <li><a class="dropdown-item" href="puzzle.html">Puzzle</a></li>
+                <li><a class="dropdown-item" href="shooting.html">Shooting</a></li>
+                <li><a class="dropdown-item" href="sports.html">Sports</a></li>
+                <li><a class="dropdown-item" href="strategy.html">Strategy</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#our-choices">Our Choices</a></li>
+            <li class="nav-item"><a class="nav-link" href="#popular-games">Most Played</a></li>
+            <li class="nav-item"><a class="nav-link" href="#featured-games">Featured</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!-- header end -->
 
-			body {
-				width: 100%;
-				margin: 0;
-				background-color: #e6e6e6;
-			}
+  <!-- main start -->
+  <main class="site-content">
+    <div class="container">
+      <div class="section-title">
+        <h2 class="bg-green">New Releases</h2>
+      </div>
+      <div class="row row-cols-2  row-cols-sm-3 row-cols-md-5 row-cols-xl-6 g-2">
+        <div class="col">
+          <div class="card">
+            <a href="//cdn.playgamefun.com/newgames/minigame.html?appid=ZombieSurvival&platform=uptapin_other"
+              title="Zombie Survival"><img class="card-img-top lazyload" src="images/games/ZombieSurvival.jpg"
+                data-src="images/games/ZombieSurvival.jpg" alt="Zombie Survival">
+            </a>
+            <div class="card-title">Zombie Survival</div>
+            <div class="card-text">1.8k Plays</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card"><a
+              href="//cdn.playgamefun.com/newgames/minigame.html?appid=CrazyKnife&platform=uptapin_other"
+              title="Crazy Knife"><img class="card-img-top lazyload" src="images/games/CrazyKnife.jpg"
+                data-src="images/games/CrazyKnife.jpg" alt="Crazy Knife">
+            </a>
+            <div class="card-title">Crazy Knife</div>
+            <div class="card-text">1.5k Plays</div>
+          </div>
+        </div>
+      </div>
 
-			.title {
-				font-size: 24px;
-				font-weight: bold;
-				padding: 20px;
-			}
+		<div class="row row-cols-2  row-cols-sm-3 row-cols-md-5 row-cols-xl-6 g-2">
+        <div class="col">
+          <div class="card"><a
+              href="//cdn.playgamefun.com/newgames/minigame.html?appid=LetMeIn&platform=uptapin_other"
+              title="Let Me In"><img class="card-img-top lazyload" src="images/games/LetMeIn.jpg"
+                data-src="images/games/LetMeIn.jpg" alt="Let Me In">
+            </a>
+            <div class="card-title">Let Me In</div>
+            <div class="card-text">1.3k Plays</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card"><a
+              href="//cdn.playgamefun.com/newgames/minigame.html?appid=MergeGuns3D&platform=uptapin_other"
+              title="Merge Guns 3D"><img class="card-img-top lazyload" src="images/games/MergeGuns3D.jpg"
+                data-src="images/games/MergeGuns3D.jpg" alt="Merge Guns 3D">
+            </a>
+            <div class="card-title">Merge Guns 3D</div>
+            <div class="card-text">1.2k Plays</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card"><a
+              href="//cdn.playgamefun.com/newgames/minigame.html?appid=FireTheGun&platform=uptapin_other"
+              title="Fire The Gun"><img class="card-img-top lazyload" src="images/games/FireTheGun.jpg"
+                data-src="images/games/FireTheGun.jpg" alt="Fire The Gun">
+            </a>
+            <div class="card-title">Fire The Gun</div>
+            <div class="card-text">1.6k Plays</div>
+          </div>
+        </div>
+      </div>
+      <div class="section-title" id="featured-games">
+        <h2 class="bg-purple">Featured Games</h2>
+      </div>
+      <div class="row row-cols-2  row-cols-sm-3 row-cols-md-5 row-cols-xl-6 g-2">
+        <div class="col">
+          <div class="card"><a
+              href="//cdn.playgamefun.com/newgames/minigame.html?appid=AceMan&platform=uptapin_other"
+              title="Ace Man"><img class="card-img-top lazyload" src="images/games/AceMan.jpg" alt="Ace Man">
+            </a>
+            <div class="card-title">Ace Man</div>
+            <div class="card-text">3.8k Plays</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card"><a
+              href="//cdn.playgamefun.com/newgames/minigame.html?appid=BumbleShooter&platform=uptapin_other"
+              title="Bumble Shooter"><img class="card-img-top lazyload" src="images/games/BumbleShooter.jpg"
+                data-src="images/games/BumbleShooter.jpg" alt="Bumble Shooter">
+            </a>
+            <div class="card-title">Bumble Shooter</div>
+            <div class="card-text">2.9k Plays</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card"><a
+              href="//cdn.playgamefun.com/newgames/minigame.html?appid=FeverRacing&platform=uptapin_other"
+              title="Fever Racing"><img class="card-img-top lazyload" src="images/games/FeverRacing.jpg"
+                data-src="images/games/FeverRacing.jpg" alt="Fever Racing">
+            </a>
+            <div class="card-title">Fever Racing</div>
+            <div class="card-text">11.8k Plays</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card"><a
+              href="//cdn.playgamefun.com/newgames/minigame.html?appid=PlantBeatZombies&platform=uptapin_other"
+              title="Plant Beat Zombies"><img class="card-img-top lazyload" src="images/games/PlantBeatZombies.jpg"
+                data-src="images/games/PlantBeatZombies.jpg" alt="Plant Beat Zombies">
+            </a>
+            <div class="card-title">Plant Beat Zombies</div>
+            <div class="card-text">7.9k Plays</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card"><a
+              href="//cdn.playgamefun.com/newgames/minigame.html?appid=Mining&platform=uptapin_other"
+              title="Mining"><img class="card-img-top lazyload" src="images/games/Mining.jpg"
+                data-src="images/games/Mining.jpg" alt="Mining">
+            </a>
+            <div class="card-title">Mining</div>
+            <div class="card-text">6.2k Plays</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card"><a
+              href="//cdn.playgamefun.com/newgames/minigame.html?appid=SkyRunning3D&platform=uptapin_other"
+              title="Sky Running 3D"><img class="card-img-top lazyload" src="images/games/SkyRunning3D.jpg"
+                data-src="images/games/SkyRunning3D.jpg" alt="Sky Running 3D">
+            </a>
+            <div class="card-title">Sky Running 3D</div>
+            <div class="card-text">5.7k Plays</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card"><a
+              href="//cdn.playgamefun.com/newgames/minigame.html?appid=TrafficRun&platform=uptapin_other"
+              title="Traffic Run"><img class="card-img-top lazyload" src="images/games/TrafficRun.jpg"
+                data-src="images/games/TrafficRun.jpg" alt="Traffic Run">
+            </a>
+            <div class="card-title">Traffic Run</div>
+            <div class="card-text">11.0k Plays</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card"><a
+              href="//cdn.playgamefun.com/newgames/minigame.html?appid=CrazyHammer&platform=uptapin_other"
+              title="Crazy Hammer"><img class="card-img-top lazyload" src="images/games/CrazyHammer.jpg"
+                data-src="images/games/CrazyHammer.jpg" alt="Crazy Hammer">
+            </a>
+            <div class="card-title">Crazy Hammer</div>
+            <div class="card-text">5.3k Plays</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card"><a
+              href="//cdn.playgamefun.com/newgames/minigame.html?appid=DefenseTower&platform=uptapin_other"
+              title="Defense Tower"><img class="card-img-top lazyload" src="images/games/DefenseTower.jpg"
+                data-src="images/games/DefenseTower.jpg" alt="Defense Tower">
+            </a>
+            <div class="card-title">Defense Tower</div>
+            <div class="card-text">10.1k Plays</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card"><a href="//cdn.playgamefun.com/newgames/minigame.html?appid=4096&platform=uptapin_other"
+              title="4096"><img class="card-img-top lazyload" src="images/games/4096.jpg" alt="4096">
+            </a>
+            <div class="card-title">4096</div>
+            <div class="card-text">5.9k Plays</div>
+          </div>
+        </div>
+      </div>
+      <div class="section-title">
+        <h2 class="bg-orange" id="popular-games">Popular Games</h2>
+      </div>
+      <div class="row row-cols-2  row-cols-sm-3 row-cols-md-5 row-cols-xl-6 g-2">
+        <div class="col">
+          <div class="card"><a
+              href="//cdn.playgamefun.com/newgames/minigame.html?appid=AmazingRoad&platform=uptapin_other"
+              title="Amazing Road"><img class="card-img-top lazyload" src="images/games/AmazingRoad.jpg"
+                alt="Amazing Road">
+            </a>
+            <div class="card-title">Amazing Road</div>
+            <div class="card-text">10.5k Plays</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card"><a
+              href="//cdn.playgamefun.com/newgames/minigame.html?appid=AnipopLink&platform=uptapin_other"
+              title="Anipop Link"><img class="card-img-top lazyload" src="images/games/AnipopLink.jpg"
+                alt="Anipop Link">
+            </a>
+            <div class="card-title">Anipop Link</div>
+            <div class="card-text">11.6k Plays</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card"><a
+              href="//cdn.playgamefun.com/newgames/minigame.html?appid=ArcheryMaster&platform=uptapin_other"
+              title="Archery Master"><img class="card-img-top lazyload" src="images/games/ArcheryMaster.jpg"
+                alt="Archery Master">
+            </a>
+            <div class="card-title">Archery Master</div>
+            <div class="card-text">2.3k Plays</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card"><a
+              href="//cdn.playgamefun.com/newgames/minigame.html?appid=BatterKing&platform=uptapin_other"
+              title="Batter King"><img class="card-img-top lazyload" src="images/games/BatterKing.jpg"
+                alt="Batter King">
+            </a>
+            <div class="card-title">Batter King</div>
+            <div class="card-text">5.4k Plays</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card"><a
+              href="//cdn.playgamefun.com/newgames/minigame.html?appid=BigSword&platform=uptapin_other"
+              title="Big Sword"><img class="card-img-top lazyload" src="images/games/BigSword.jpg" alt="Big Sword">
+            </a>
+            <div class="card-title">Big Sword</div>
+            <div class="card-text">2.5k Plays</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card"><a
+              href="//cdn.playgamefun.com/newgames/minigame.html?appid=BlockGun3D&platform=uptapin_other"
+              title="Block Gun 3D"><img class="card-img-top lazyload" src="images/games/BlockGun3D.jpg"
+                alt="Block Gun 3D">
+            </a>
+            <div class="card-title">Block Gun 3D</div>
+            <div class="card-text">9.7k Plays</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card"><a
+              href="//cdn.playgamefun.com/newgames/minigame.html?appid=BlockPuzzle&platform=uptapin_other"
+              title="Block Puzzle"><img class="card-img-top lazyload" src="images/games/BlockPuzzle.jpg"
+                alt="Block Puzzle">
+            </a>
+            <div class="card-title">Block Puzzle</div>
+            <div class="card-text">2.7k Plays</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card"><a
+              href="//cdn.playgamefun.com/newgames/minigame.html?appid=BoardTheTrain&platform=uptapin_other"
+              title="Board The Train"><img class="card-img-top lazyload" src="images/games/BoardTheTrain.jpg"
+                alt="Board The Train">
+            </a>
+            <div class="card-title">Board The Train</div>
+            <div class="card-text">3.5k Plays</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card"><a
+              href="//cdn.playgamefun.com/newgames/minigame.html?appid=BubbleBlast&platform=uptapin_other"
+              title="Bubble Blast"><img class="card-img-top lazyload" src="images/games/BubbleBlast.jpg"
+                alt="Bubble Blast">
+            </a>
+            <div class="card-title">Bubble Blast</div>
+            <div class="card-text">3.3k Plays</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card"><a
+              href="//cdn.playgamefun.com/newgames/minigame.html?appid=BulletMaster3D&platform=uptapin_other"
+              title="Bullet Master 3D"><img class="card-img-top lazyload" src="images/games/BulletMaster3D.jpg"
+                alt="Bullet Master 3D">
+            </a>
+            <div class="card-title">Bullet Master 3D</div>
+            <div class="card-text">9.1k Plays</div>
+          </div>
+        </div>
+      </div>
+      <div class="section-title">
+        <h2 class="bg-yellow">Quick Plays</h2>
+      </div>
+      <div class="row row-cols-2  row-cols-sm-3 row-cols-md-5 row-cols-xl-6 g-2">
+        <div class="col">
+          <div class="card"><a
+              href="//cdn.playgamefun.com/newgames/minigame.html?appid=CollectColorfulBalls&platform=uptapin_other"
+              title="Collect Colorful Balls"><img class="card-img-top lazyload"
+                src="images/games/CollectColorfulBalls.jpg" alt="Collect Colorful Balls">
+            </a>
+            <div class="card-title">Collect Colorful Balls</div>
+            <div class="card-text">6.7k Plays</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card"><a
+              href="//cdn.playgamefun.com/newgames/minigame.html?appid=ColorBall3D&platform=uptapin_other"
+              title="Color Ball 3D"><img class="card-img-top lazyload" src="images/games/ColorBall3D.jpg"
+                alt="Color Ball 3D">
+            </a>
+            <div class="card-title">Color Ball 3D</div>
+            <div class="card-text">2.7k Plays</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card"><a
+              href="//cdn.playgamefun.com/newgames/minigame.html?appid=CrashTower3D&platform=uptapin_other"
+              title="Crash Tower 3D"><img class="card-img-top lazyload" src="images/games/CrashTower3D.jpg"
+                alt="Crash Tower 3D">
+            </a>
+            <div class="card-title">Crash Tower 3D</div>
+            <div class="card-text">10.3k Plays</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card"><a
+              href="//cdn.playgamefun.com/newgames/minigame.html?appid=CrazyBomb&platform=uptapin_other"
+              title="Crazy Bomb"><img class="card-img-top lazyload" src="images/games/CrazyBomb.jpg" alt="Crazy Bomb">
+            </a>
+            <div class="card-title">Crazy Bomb</div>
+            <div class="card-text">2.9k Plays</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card"><a
+              href="//cdn.playgamefun.com/newgames/minigame.html?appid=CrazyMoto&platform=uptapin_other"
+              title="Crazy Moto"><img class="card-img-top lazyload" src="images/games/CrazyMoto.jpg" alt="Crazy Moto">
+            </a>
+            <div class="card-title">Crazy Moto</div>
+            <div class="card-text">11.6k Plays</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card"><a
+              href="//cdn.playgamefun.com/newgames/minigame.html?appid=CrazyPortal&platform=uptapin_other"
+              title="Crazy Portal"><img class="card-img-top lazyload" src="images/games/CrazyPortal.jpg"
+                alt="Crazy Portal">
+            </a>
+            <div class="card-title">Crazy Portal</div>
+            <div class="card-text">6.4k Plays</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card"><a
+              href="//cdn.playgamefun.com/newgames/minigame.html?appid=CrazyTrain3D&platform=uptapin_other"
+              title="Crazy Train 3D"><img class="card-img-top lazyload" src="images/games/CrazyTrain3D.jpg"
+                alt="Crazy Train 3D">
+            </a>
+            <div class="card-title">Crazy Train 3D</div>
+            <div class="card-text">7.7k Plays</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card"><a
+              href="//cdn.playgamefun.com/newgames/minigame.html?appid=DeathRun&platform=uptapin_other"
+              title="Death Run"><img class="card-img-top lazyload" src="images/games/DeathRun.jpg" alt="Death Run">
+            </a>
+            <div class="card-title">Death Run</div>
+            <div class="card-text">7.6k Plays</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card"><a
+              href="//cdn.playgamefun.com/newgames/minigame.html?appid=DragonCrush&platform=uptapin_other"
+              title="Dragon Crush"><img class="card-img-top lazyload" src="images/games/DragonCrush.jpg"
+                alt="Dragon Crush">
+            </a>
+            <div class="card-title">Dragon Crush</div>
+            <div class="card-text">4.5k Plays</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card"><a
+              href="//cdn.playgamefun.com/newgames/minigame.html?appid=DressQueen&platform=uptapin_other"
+              title="Dress Queen"><img class="card-img-top lazyload" src="images/games/DressQueen.jpg"
+                alt="Dress Queen">
+            </a>
+            <div class="card-title">Dress Queen</div>
+            <div class="card-text">2.7k Plays</div>
+          </div>
+        </div>
 
-			#root {
-				width: 100%;
-				padding: 0 12px;
-			}
+      </div>
+      <div class="section-title" id="our-choices">
+        <h2 class="bg-blue">Our Choices</h2>
+      </div>
+      <div class="row row-cols-2  row-cols-sm-3 row-cols-md-5 row-cols-xl-6 g-2">
+        <div class="col">
+          <div class="card"><a
+              href="//cdn.playgamefun.com/newgames/minigame.html?appid=FisherMan&platform=uptapin_other"
+              title="Fisher Man"><img class="card-img-top lazyload" src="images/games/FisherMan.jpg" alt="Fisher Man">
+            </a>
+            <div class="card-title">Fisher Man</div>
+            <div class="card-text">6.7k Plays</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card"><a
+              href="//cdn.playgamefun.com/newgames/minigame.html?appid=FlyPass&platform=uptapin_other"
+              title="Fly Pass"><img class="card-img-top lazyload" src="images/games/FlyPass.jpg" alt="Fly Pass">
+            </a>
+            <div class="card-title">Fly Pass</div>
+            <div class="card-text">7.4k Plays</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card"><a
+              href="//cdn.playgamefun.com/newgames/minigame.html?appid=GoldenGlove&platform=uptapin_other"
+              title="Golden Glove"><img class="card-img-top lazyload" src="images/games/GoldenGlove.jpg"
+                alt="Golden Glove">
+            </a>
+            <div class="card-title">Golden Glove</div>
+            <div class="card-text">11.2k Plays</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card"><a
+              href="//cdn.playgamefun.com/newgames/minigame.html?appid=GunShooter&platform=uptapin_other"
+              title="Gun Shooter"><img class="card-img-top lazyload" src="images/games/GunShooter.jpg"
+                alt="Gun Shooter">
+            </a>
+            <div class="card-title">Gun Shooter</div>
+            <div class="card-text">5.9k Plays</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card"><a
+              href="//cdn.playgamefun.com/newgames/minigame.html?appid=HappyBilliards&platform=uptapin_other"
+              title="Happy Billiards"><img class="card-img-top lazyload" src="images/games/HappyBilliards.jpg"
+                alt="Happy Billiards">
+            </a>
+            <div class="card-title">Happy Billiards</div>
+            <div class="card-text">4.8k Plays</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card"><a
+              href="//cdn.playgamefun.com/newgames/minigame.html?appid=HelpTheZombie&platform=uptapin_other"
+              title="Help The Zombie"><img class="card-img-top lazyload" src="images/games/HelpTheZombie.jpg"
+                alt="Help The Zombie">
+            </a>
+            <div class="card-title">Help The Zombie</div>
+            <div class="card-text">11.1k Plays</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card"><a
+              href="//cdn.playgamefun.com/newgames/minigame.html?appid=HillRacing&platform=uptapin_other"
+              title="Hill Racing"><img class="card-img-top lazyload" src="images/games/HillRacing.jpg"
+                alt="Hill Racing">
+            </a>
+            <div class="card-title">Hill Racing</div>
+            <div class="card-text">7.0k Plays</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card"><a
+              href="//cdn.playgamefun.com/newgames/minigame.html?appid=HiTaxi&platform=uptapin_other"
+              title="Hi Taxi"><img class="card-img-top lazyload" src="images/games/HiTaxi.jpg" alt="Hi Taxi">
+            </a>
+            <div class="card-title">Hi Taxi</div>
+            <div class="card-text">5.1k Plays</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card"><a
+              href="//cdn.playgamefun.com/newgames/minigame.html?appid=HungryAnimals&platform=uptapin_other"
+              title="Hungry Animals"><img class="card-img-top lazyload" src="images/games/HungryAnimals.jpg"
+                alt="Hungry Animals">
+            </a>
+            <div class="card-title">Hungry Animals</div>
+            <div class="card-text">8.8k Plays</div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card"><a
+              href="//cdn.playgamefun.com/newgames/minigame.html?appid=IdleRestaurantTycoon&platform=uptapin_other"
+              title="Idle Restaurant Tycoon"><img class="card-img-top lazyload"
+                src="images/games/IdleRestaurantTycoon.jpg" alt="Idle Restaurant Tycoon">
+            </a>
+            <div class="card-title">Idle Restaurant Tycoon</div>
+            <div class="card-text">4.2k Plays</div>
+          </div>
+        </div>
 
-			.wrapper {
-				padding: 8px;
-				background-color: #ffffff;
-				margin-bottom: 12px;
-			}
+      </div>
+    </div>
+  </main>
+  <!-- main end -->
 
-			.lazy {
-				display: block;
-				width: 100%;
-			}
-		</style> -->
-	</head>
-	<body>
-		<div id="root">
-			<div style="margin-top: 20px"></div>
+  <!-- footer start -->
+  <footer class="site-footer">
 
-			<!-- <div style="margin-top: 10px; margin-bottom: 10px; position: relative; border-radius: 2px; overflow: hidden">
-				<div class="top" style="width: 100%; height: 60px; background-color: aqua"></div>
-				<div class="bottom" style="width: 100%; height: 70px; background-color: bisque"></div>
-				<div
-					class="ava"
-					style="
-						width: 70px;
-						height: 70px;
-						border-radius: 50%;
-						position: absolute;
-						top: 20px;
-						left: 50%;
-						transform: translateX(-50%);
-						background: url(./images/头像.jpg) no-repeat center;
-						background-size: 100% 100%;
-					"
-				></div>
-				<h3 style="position: absolute; top: 75px; left: 50%; transform: translateX(-50%)">A lol world</h3>
-			</div> -->
-			<!-- YOUTUBE -->
-			<!-- <div class="youtube" style="display: flex; justify-content: space-around; margin-bottom: 10px">
-				<div class="one" style="margin-right: 6px">
-					<iframe
-						width="100%"
-						height="315"
-						style="border-radius: 10px"
-						src="https://www.youtube.com/embed/pxORp5iATcs" 
-						title="YouTube video player"
-						frameborder="0"
-						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-						allowfullscreen
-					></iframe>
-				</div>
-				<a href="https://play.google.com/store/apps/details?id=dope.dopewallpapers.backgrounds&referrer=utm_source%3DTPC" class="two" style="margin-left: 6px">
-					<iframe
-						width="100%"
-						height="315"
-						style="border-radius: 10px"
-						src="https://www.youtube.com/embed/gaxb_3ndMSM" 
-						title="YouTube video player"
-						frameborder="0"
-						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-						allowfullscreen
-					></iframe>
-				</a>
-			</div> -->
-			<!-- <div class="youtube" style="display: flex; justify-content: space-around; margin-bottom: 10px">
-				<div class="one" style="margin-right: 6px">
-					<iframe
-						width="100%"
-						height="315"
-						style="border-radius: 10px"
-						src="https://www.youtube.com/embed/3G9jb6s3Ad8"
-						title="YouTube video player"
-						frameborder="0"
-						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-						allowfullscreen
-					></iframe>
-				</div>
-				<div class="two" style="margin-left: 6px">
-					<iframe
-						width="100%"
-						height="315"
-						style="border-radius: 10px"
-						src="https://www.youtube.com/embed/bBf8iaAEA-Y" 
-						title="YouTube video player"
-						frameborder="0"
-						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-						allowfullscreen
-					></iframe>
-				</div>
-			</div> -->
-			<!-- GIF -->
-			<!-- <div class="GIF" style="display: flex; justify-content: space-around; margin-bottom: 10px">
-				<a href="https://s.click.aliexpress.com/e/_AXtGbP" class="one" style="margin-right: 6px">
-					<img src="./images/IMG_1969.GIF" alt="" style="width: 100%; height: 280px; border-radius: 10px" />
-				</a>
-				<a href="https://smsecure-dt.com/smartlink/?a=139745&sm=9872&mt=7&s1=TPC1" class="two" style="margin-left: 6px">
-					<img src="./images/IMG_1971.GIF" alt="" style="width: 100%; height: 280px; border-radius: 10px" />
-				</a>
-			</div> -->
-			<!-- VIDEO -->
-			<!-- <div id="rn_ad_native_xe43h"></div> -->
-			<fw-embed-feed app_id="XtmB44NVgdoudKg9kMkoy3hvoWd1NLms" mode="grid" open_in="_blank" max_videos="0" placement="middle" title=""></fw-embed-feed>
-		</div>
-		<!-- AD -->
-		<!-- <script src="//cdn.runative-syndicate.com/sdk/v1/n.js"></script>
-		<script>
-			NativeAd({
-				element_id: 'rn_ad_native_xe43h',
-				spot: '2061ec722923463689d54eb630b59439',
-				type: 'label-under',
-				cols: 2,
-				rows: 1,
-				title: '',
-				titlePosition: 'left',
-				adsByPosition: 'bottom-right',
-				breakpoints: [
-					{
-						cols: 2,
-						width: 770,
-					},
-				],
-				showLogoInfo: true,
-				styles: {
-					image: {
-						'padding-bottom': '229px',
-					},
-					container: {
-						width: '100%',
-						height: '250px',
-						overflow: 'hidden',
-					},
-				},
-			})
-		</script> -->
-		<!-- pc弹框 -->
-		<!-- <script src="//cdn.runative-syndicate.com/sdk/v1/inpage.push.js"></script>
-		<script>
-			RnInPagePush({
-				spot: '4b819702e51e4206bc812428d75849b1',
-				cookieExpires: 1,
-				verticalPosition: 'top',
-			})
-		</script> -->
+    <div class="navbar">
+      <div class="container">
+        <div class="site-title"><strong>PlayGameFun</strong> | Free Online Games</div>
+        <ul class="nav">
+          <li class="nav-item"><a class="nav-link" href="privacy-policy.html">Privacy Policy</a></li>
+          <li class="nav-item"><a class="nav-link" href="terms-of-use.html">Terms of Use</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="site-copyright">
+      <img class="logo" src="images/brand/game-rock-logo-gray.svg" alt="PlayGameFun">
+      <div class="copyright">Copyright © 2021 PlayGameFun.com<br>All Right Reserved</div>
+    </div>
+  </footer>
+  <!-- footer end -->
 
-		<!-- <script type="text/javascript" src="https://s.skimresources.com/js/187404X1658028.skimlinks.js"></script> -->
-		<script type="text/javascript">
-			var vglnk = {key: '69de3e0f8a85ea77570108a526a349d9'};
-			(function(d, t) {
-					var s = d.createElement(t);
-							s.type = 'text/javascript';
-							s.async = true;
-							s.src = '//cdn.viglink.com/api/vglnk.js';
-					var r = d.getElementsByTagName(t)[0];
-							r.parentNode.insertBefore(s, r);
-			}(document, 'script'));
-	</script>
-	</body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"></script>
+</body>
+
 </html>
