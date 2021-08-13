@@ -1,170 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<script src="https://cdn.jsdelivr.net/npm/intersection-observer@0.7.0/intersection-observer.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.3.1/dist/lazyload.min.js"></script>
 
-		<!-- Google Tag Manager -->
-		<script>
-			;(function (w, d, s, l, i) {
-				w[l] = w[l] || []
-				w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' })
-				var f = d.getElementsByTagName(s)[0],
-					j = d.createElement(s),
-					dl = l != 'dataLayer' ? '&l=' + l : ''
-				j.async = true
-				j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl
-				f.parentNode.insertBefore(j, f)
-			})(window, document, 'script', 'dataLayer', 'GTM-58F7GTF')
-		</script>
-		<!-- End Google Tag Manager -->
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<script src="https://cdn.jsdelivr.net/npm/intersection-observer@0.7.0/intersection-observer.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.3.1/dist/lazyload.min.js"></script>
 
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-MT723MRCVM"></script>
-		<script>
-			window.dataLayer = window.dataLayer || []
-			function gtag() {
-				dataLayer.push(arguments)
-			}
-			gtag('js', new Date())
+	<!-- Google Tag Manager -->
+	<script>
+		; (function (w, d, s, l, i) {
+			w[l] = w[l] || []
+			w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' })
+			var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s),
+				dl = l != 'dataLayer' ? '&l=' + l : ''
+			j.async = true
+			j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl
+			f.parentNode.insertBefore(j, f)
+		})(window, document, 'script', 'dataLayer', 'GTM-58F7GTF')
+	</script>
+	<!-- End Google Tag Manager -->
 
-			gtag('config', 'G-MT723MRCVM')
-		</script>
-		<script async type="text/javascript" src="https://asset.fwcdn2.com/js/embed-feed.js"></script>
-		<style>
-			* {
-				box-sizing: border-box;
-			}
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-MT723MRCVM"></script>
+	<script>
+		window.dataLayer = window.dataLayer || []
+		function gtag() {
+			dataLayer.push(arguments)
+		}
+		gtag('js', new Date())
 
-			html {
-				width: 100%;
-			}
+		gtag('config', 'G-MT723MRCVM')
+	</script>
+	<script async type="text/javascript" src="https://asset.fwcdn2.com/js/embed-feed.js"></script>
+	<style>
+		* {
+			box-sizing: border-box;
+		}
 
-			body {
-				width: 100%;
-				margin: 0;
-				background-color: #e6e6e6;
-			}
+		html {
+			width: 100%;
+		}
 
-			.title {
-				font-size: 24px;
-				font-weight: bold;
-				padding: 20px;
-			}
+		body {
+			width: 100%;
+			margin: 0;
+			background-color: #e6e6e6;
+		}
 
-			#root {
-				width: 100%;
-				padding: 0 12px;
-			}
+		.title {
+			font-size: 24px;
+			font-weight: bold;
+			padding: 20px;
+		}
 
-			.wrapper {
-				padding: 8px;
-				background-color: #ffffff;
-				margin-bottom: 12px;
-			}
+		#root {
+			width: 100%;
+			padding: 0 12px;
+		}
 
-			.lazy {
-				display: block;
-				width: 100%;
-			}
-			.advertising {
-				position: relative;
-				margin-top: 12px;
-				width: 100%;
-				height: width * 1.5;
-				display: flex;
-				margin-bottom: 10px;
-				justify-content: space-between;
-			}
-			.ad_box {
-				max-width: 291px;
-				width: 32%;
-				height: width * 1.5;
-				border-radius: 10px;
-				background-color: #efefef;
-			}
+		.wrapper {
+			padding: 8px;
+			background-color: #ffffff;
+			margin-bottom: 12px;
+		}
 
-			.ad {
-				width: 100%;
-				height: 100%;
-				border-radius: 10px;
-			}
-			/* @media (min-width: 1200px) {
-				.advertising {
-					height: 150%;
-				}
-			}
+		.lazy {
+			display: block;
+			width: 100%;
+		}
 
-			@media (min-width: 980px) {
-				.advertising {
-					height: 150%;
-				}
-			}
-			@media (min-width: 768px) and (max-width: 979px) {
-				.advertising {
-					height: 150%;
-				}
-			}
-			@media (max-width: 767px) {
-				.advertising {
-					height: 150%;
-				}
-			}
-			@media (max-width: 480px) {
-				.advertising {
-					height: 150%;
-				}
-			} */
-		</style>
-	</head>
-	<body>
-		<!-- Google Tag Manager (noscript) -->
-		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-58F7GTF" height="0" width="0" style="display: none; visibility: hidden"></iframe></noscript>
-		<!-- End Google Tag Manager (noscript) -->
+		.advertising {
+			position: relative;
+			margin-top: 12px;
+			width: 100%;
+			height: width * 1.5;
+			display: flex;
+			margin-bottom: 10px;
+			justify-content: space-between;
+		}
 
-		<div id="root">
-			<div style="margin-top: 20px"></div>
-			<iframe
-				width="100%"
-				height="315"
-				style="border-radius: 10px"
-				src="https://www.youtube.com/embed/videoseries?list=PLxqpj9DwsfYNlmGgE374LnINHiiPulD6x"
-				title="YouTube video player"
-				frameborder="0"
-				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-				allowfullscreen
-			></iframe>
-			<div style="margin-top: 10px"><script async src="https://ndroip.com/na/waWQiOjEwOTYxNjcsInNpZCI6MTEwNTYyOSwid2lkIjoyMjk1MTgsInNyYyI6Mn0=eyJ.js"></script></div>
+		.ad_box {
+			max-width: 291px;
+			width: 32%;
+			height: width * 1.5;
+			border-radius: 10px;
+			background-color: #efefef;
+		}
 
-			<iframe
-				width="100%"
-				height="315"
-				style="border-radius: 10px; margin-top: 10px"
-				src="https://www.youtube.com/embed/7P6mraxQJws"
-				title="YouTube video player"
-				frameborder="0"
-				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-				allowfullscreen
-			></iframe>
-			<!-- GIF -->
-			<div class="GIF" style="margin-top: 5px; margin-bottom: 10px">
-				<a href="https://ww55.siteplug.com/sssdomweb?enk=cd9e5cfc39832345f30e90f5328d5ecfe3b71864507b41d0951b103acbf5f1a7ef2c530cc0fe75dcee32f77628e1480a3acec33b49c3549d2eb2f663d65f3654" class="two">
-					<img src="./images/550_480.png" alt="" style="width: 100%; height: 280px; border-radius: 10px" />
-				</a>
-			</div>
+		.ad {
+			width: 100%;
+			height: 100%;
+			border-radius: 10px;
+		}
+	</style>
+</head>
 
-			<div class="GIF" style="display: flex; justify-content: space-around; margin-bottom: 10px">
-				<a href="https://smrtsecure-dt.com/smartlink/?a=139745&sm=9873&mt=7&s1=TPC1" class="one" style="margin-right: 6px">
-					<img src="./images/IMG_2425.GIF" alt="" style="width: 100%; height: 280px; border-radius: 10px" />
-				</a>
-				<a href="https://smsecure-dt.com/smartlink/?a=139745&sm=9872&mt=7&s1=TPC2" class="two" style="margin-left: 6px">
-					<img src="./images/IMG_2426.GIF" alt="" style="width: 100%; height: 280px; border-radius: 10px" />
-				</a>
-			</div>
-			<!-- <div class="advertising">
+<body>
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-58F7GTF" height="0" width="0"
+			style="display: none; visibility: hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+
+	<div id="root">
+		<div style="margin-top: 20px"></div>
+		<iframe width="100%" height="315" style="border-radius: 10px"
+			src="https://www.youtube.com/embed/videoseries?list=PLxqpj9DwsfYNlmGgE374LnINHiiPulD6x"
+			title="YouTube video player" frameborder="0"
+			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+			allowfullscreen></iframe>
+		<div style="margin-top: 10px">
+			<script async
+				src="https://ndroip.com/na/waWQiOjEwOTYxNjcsInNpZCI6MTEwNTYyOSwid2lkIjoyMjk1MTgsInNyYyI6Mn0=eyJ.js"></script>
+		</div>
+		<div style="margin-top: 10px"></div>
+		<script type="text/javascript" src="//cdn.runative-syndicate.com/sdk/v1/bi.js"
+			data-ts-spot="d9bc2ef870b04fa8a7a11cbd85f2bba9" data-ts-width="300" data-ts-height="250" async defer></script>
+	</div>
+	<iframe width="100%" height="315" style="border-radius: 10px; margin-top: 10px"
+		src="https://www.youtube.com/embed/7P6mraxQJws" title="YouTube video player" frameborder="0"
+		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+		allowfullscreen></iframe>
+	<!-- GIF -->
+	<div class="GIF" style="margin-top: 5px; margin-bottom: 10px">
+		<a href="https://ww55.siteplug.com/sssdomweb?enk=cd9e5cfc39832345f30e90f5328d5ecfe3b71864507b41d0951b103acbf5f1a7ef2c530cc0fe75dcee32f77628e1480a3acec33b49c3549d2eb2f663d65f3654"
+			class="two">
+			<img src="./images/550_480.png" alt="" style="width: 100%; height: 280px; border-radius: 10px" />
+		</a>
+	</div>
+
+	<div class="GIF" style="display: flex; justify-content: space-around; margin-bottom: 10px">
+		<a href="https://smrtsecure-dt.com/smartlink/?a=139745&sm=9873&mt=7&s1=TPC1" class="one" style="margin-right: 6px">
+			<img src="./images/IMG_2425.GIF" alt="" style="width: 100%; height: 280px; border-radius: 10px" />
+		</a>
+		<a href="https://smsecure-dt.com/smartlink/?a=139745&sm=9872&mt=7&s1=TPC2" class="two" style="margin-left: 6px">
+			<img src="./images/IMG_2426.GIF" alt="" style="width: 100%; height: 280px; border-radius: 10px" />
+		</a>
+	</div>
+	<!-- <div class="advertising">
 				<a href="https://uptapapi.uptap.com/h5Game/?type=Game&platform=uptapin2&appid=BigSword" class="ad_box" style="display: none" id="0">
 					<img class="ad" src="./images/BigSword20120519.gif" alt="" />
 				</a>
@@ -196,21 +171,23 @@
 					<img class="ad" src="./images/ZombieSurvival.gif" alt="" />
 				</a>
 			</div> -->
-			<fw-embed-feed app_id="XtmB44NVgdoudKg9kMkoy3hvoWd1NLms" mode="grid" open_in="_blank" max_videos="0" placement="middle" title=""></fw-embed-feed>
-		</div>
-		<script type="text/javascript" src="https://s.skimresources.com/js/187404X1658028.skimlinks.js"></script>
-	</body>
-	<script>
-		var map = {}
-		for (var i = 0; i < 3; i++) {
-			var r = Math.floor(Math.random() * 10)
-			if (null == map[r]) {
-				document.getElementById(r).style.display = ''
-				map[r] = 1
-			} else {
-				i--
-				continue
-			}
+	<fw-embed-feed app_id="XtmB44NVgdoudKg9kMkoy3hvoWd1NLms" mode="grid" open_in="_blank" max_videos="0"
+		placement="middle" title=""></fw-embed-feed>
+	</div>
+	<script type="text/javascript" src="https://s.skimresources.com/js/187404X1658028.skimlinks.js"></script>
+</body>
+<script>
+	var map = {}
+	for (var i = 0; i < 3; i++) {
+		var r = Math.floor(Math.random() * 10)
+		if (null == map[r]) {
+			document.getElementById(r).style.display = ''
+			map[r] = 1
+		} else {
+			i--
+			continue
 		}
-	</script>
+	}
+</script>
+
 </html>
